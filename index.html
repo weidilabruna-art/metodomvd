@@ -1022,4 +1022,61 @@ window.addEventListener('scroll',fadeScroll)</script> </div><div class="elemento
 
 
 
+
+<!-- SCRIPT FAQ ACCORDION MOBILE & DESKTOP -->
+<script>
+(function() {
+  function initFAQ() {
+    var titles = document.querySelectorAll('.elementor-toggle .elementor-tab-title');
+    if (!titles.length) return;
+
+    titles.forEach(function(title) {
+      // Remove listeners antigos se houver
+      title.style.cursor = 'pointer';
+      
+      // Também garantir que o link interno não impeça o clique ou recarregue a página
+      var a = title.querySelector('a');
+      if (a) {
+        a.style.cursor = 'pointer';
+        a.onclick = function(e) {
+          e.preventDefault();
+        };
+      }
+
+      title.onclick = function(e) {
+        e.preventDefault();
+        var item = title.closest('.elementor-toggle-item');
+        if (!item) return;
+
+        var content = item.querySelector('.elementor-tab-content');
+        if (!content) return;
+
+        var isExpanded = title.getAttribute('aria-expanded') === 'true';
+
+        if (isExpanded) {
+          // Fechar
+          title.setAttribute('aria-expanded', 'false');
+          title.classList.remove('elementor-active');
+          content.classList.remove('elementor-active');
+          content.style.display = 'none';
+        } else {
+          // Abrir
+          title.setAttribute('aria-expanded', 'true');
+          title.classList.add('elementor-active');
+          content.classList.add('elementor-active');
+          content.style.display = 'block';
+        }
+      };
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFAQ);
+  } else {
+    initFAQ();
+  }
+  window.addEventListener('load', initFAQ);
+})();
+</script>
+
 </body></html><!-- Page optimized by LiteSpeed Cache @2026-10-14 11:14:07 --><!-- Page cached by LiteSpeed Cache 7.8.1 on 2026-10-14 11:14:06 --><!-- Guest Mode --><!-- QUIC.cloud UCSS in queue -->
