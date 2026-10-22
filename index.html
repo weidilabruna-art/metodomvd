@@ -482,49 +482,58 @@ html, body {
   padding-bottom: 30px !important;
 }
 
-/* Prevent containers from overflowing horizontally and creating white side gaps */
-.elementor,
-[data-elementor-type="wp-page"],
-.elementor-section,
-.e-con,
-.e-con-boxed,
-.e-con-full,
-.e-con-inner {
-  max-width: 100% !important;
-  box-sizing: border-box !important;
-}
-
 @media (max-width: 767px) {
   html, body {
     overflow-x: hidden !important;
     width: 100% !important;
     max-width: 100vw !important;
   }
-  
-  .elementor-11066 .elementor-element.elementor-element-af0908d,
-  .elementor-11066 .elementor-element.elementor-element-6574d75,
-  .elementor-11066 .elementor-element.elementor-element-416bf31,
-  .elementor-11066 .elementor-element.elementor-element-48d1576,
-  .elementor-11066 .elementor-element.elementor-element-162a58e,
-  .elementor-11066 .elementor-element.elementor-element-83c3f0f,
-  .bonus-container {
+
+  /* Garante margem/respiro lateral seguro de 20px em todas as seções no mobile para não cortar texto nem encostar na borda */
+  .elementor-11066 .e-con-boxed > .e-con-inner,
+  .elementor-11066 .elementor-element.elementor-element-796148c > .e-con-inner,
+  .elementor-11066 .elementor-element.elementor-element-d2d8278 > .e-con-inner,
+  .elementor-11066 .elementor-element.elementor-element-8fb2206 > .e-con-inner,
+  .elementor-11066 .elementor-element.elementor-element-a4cda25 > .e-con-inner,
+  .elementor-11066 .elementor-element.elementor-element-be2e2cd > .e-con-inner {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
     max-width: 100% !important;
     width: 100% !important;
   }
 
-  .elementor-element.elementor-element-be2e2cd {
-    padding-bottom: 15px !important;
+  /* Ajusta container das provas sociais no mobile para coluna única sem estourar largura */
+  .elementor-11066 .elementor-element.elementor-element-c553509 {
+    flex-direction: column !important;
+    width: 100% !important;
     max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .elementor-11066 .elementor-element.elementor-element-b6cfc8b {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .elementor-11066 .elementor-element.elementor-element-8749936 {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .provas-sociais-grid-container {
-    padding-bottom: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px 0 !important;
+    box-sizing: border-box !important;
   }
 
   .provas-sociais-grid {
     grid-template-columns: 1fr !important;
     gap: 20px !important;
-    padding: 0 16px !important;
+    padding: 0 !important;
     max-width: 100% !important;
     width: 100% !important;
     box-sizing: border-box !important;
@@ -539,44 +548,6 @@ html, body {
     width: 100% !important;
     height: auto !important;
     display: block !important;
-  }
-
-  /* Reduz espacos nos cards 'Com o metodo voce vai' apenas no mobile */
-  .elementor-11066 .elementor-element.elementor-element-2bde93a {
-    gap: 14px !important;
-    row-gap: 14px !important;
-    --gap: 14px 14px !important;
-    --row-gap: 14px !important;
-  }
-
-  .elementor-11066 .elementor-element.elementor-element-2bde93a .card,
-  .elementor-11066 .elementor-element.elementor-element-028927b,
-  .elementor-11066 .elementor-element.elementor-element-125b23d,
-  .elementor-11066 .elementor-element.elementor-element-2af1f76 {
-    padding: 16px 18px !important;
-    --padding-top: 16px !important;
-    --padding-bottom: 16px !important;
-    --padding-left: 18px !important;
-    --padding-right: 18px !important;
-    gap: 10px !important;
-    row-gap: 10px !important;
-    --gap: 10px 10px !important;
-    --row-gap: 10px !important;
-  }
-
-  .elementor-11066 .elementor-element.elementor-element-2bde93a .elementor-widget-icon-box {
-    margin-bottom: 0px !important;
-    margin-top: 0px !important;
-    margin: 0px !important;
-  }
-
-  .elementor-11066 .elementor-element.elementor-element-2bde93a .elementor-icon-box-wrapper {
-    gap: 10px !important;
-  }
-
-  .elementor-11066 .elementor-element.elementor-element-2bde93a .elementor-icon-box-description {
-    font-size: 1rem !important;
-    line-height: 1.35 !important;
   }
 }
 </style></head><body data-rsssl="1" class="wp-singular page-template-default page page-id-11066 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default wpf-default wpft- wpf-guest wpfu-group-4 wpf-theme-2026 wpf-is_standalone-0 wpf-boardid-0 is_wpforo_page-0 is_wpforo_url-0 is_wpforo_shortcode_page-0 elementor-default elementor-template-canvas elementor-kit-5 elementor-page elementor-page-11066">
