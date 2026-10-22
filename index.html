@@ -456,18 +456,85 @@ box-shadow: 0 0 0 0 transparent;
 
 <style>
 html { scroll-behavior: smooth; }
+
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Fix top fixed bar to always span 100% full width */
+.elementor-11066 .elementor-element.elementor-element-9aea4a9 {
+  width: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Eliminate empty video container causing white space below feedbacks */
+.elementor-element-4b933da {
+  display: none !important;
+}
+
+.elementor-element.elementor-element-be2e2cd {
+  padding-bottom: 30px !important;
+}
+
+/* Prevent containers from overflowing horizontally and creating white side gaps */
+.elementor,
+[data-elementor-type="wp-page"],
+.elementor-section,
+.e-con,
+.e-con-boxed,
+.e-con-full,
+.e-con-inner {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
 @media (max-width: 767px) {
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+  
+  .elementor-11066 .elementor-element.elementor-element-af0908d,
+  .elementor-11066 .elementor-element.elementor-element-6574d75,
+  .elementor-11066 .elementor-element.elementor-element-416bf31,
+  .elementor-11066 .elementor-element.elementor-element-48d1576,
+  .elementor-11066 .elementor-element.elementor-element-162a58e,
+  .elementor-11066 .elementor-element.elementor-element-83c3f0f,
+  .bonus-container {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .elementor-element.elementor-element-be2e2cd {
+    padding-bottom: 15px !important;
+    max-width: 100% !important;
+  }
+
+  .provas-sociais-grid-container {
+    padding-bottom: 10px !important;
+  }
+
   .provas-sociais-grid {
     grid-template-columns: 1fr !important;
-    gap: 22px !important;
+    gap: 20px !important;
     padding: 0 16px !important;
-    max-width: 500px !important;
-    margin: 0 auto !important;
+    max-width: 100% !important;
     width: 100% !important;
+    box-sizing: border-box !important;
   }
+  
   .provas-sociais-grid > div {
     width: 100% !important;
+    box-sizing: border-box !important;
   }
+  
   .provas-sociais-grid img {
     width: 100% !important;
     height: auto !important;
@@ -553,7 +620,7 @@ Como criar paginas de vendas e formas de pagamento para começar a vender seu cu
     </div>
   </div>
 </div>
-</div></div><div class="elementor-element elementor-element-4b933da e-con-full e-flex e-con e-child" data-id="4b933da" data-element_type="container" data-e-type="container"><div class="elementor-element elementor-element-f7930fd elementor-widget elementor-widget-video" data-id="f7930fd" data-element_type="widget" data-e-type="widget" data-settings="{" youtube_url":"https:\="" \="" www.youtube.com\="" watch?v="y7I-DL52VYo&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}&quot;" data-widget_type="video.default"><div class="elementor-wrapper elementor-open-inline"><div class="elementor-video"></div></div></div><div class="elementor-element elementor-element-a055f80 elementor-widget elementor-widget-video" data-id="a055f80" data-element_type="widget" data-e-type="widget" data-settings="{" youtube_url":"https:\="" \="" www.youtube.com\="" watch?v="Du2vp38fUZM&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}&quot;" data-widget_type="video.default"><div class="elementor-wrapper elementor-open-inline"><div class="elementor-video"></div></div></div><div class="elementor-element elementor-element-8c47f6b elementor-widget elementor-widget-video" data-id="8c47f6b" data-element_type="widget" data-e-type="widget" data-settings="{" youtube_url":"https:\="" \="" www.youtube.com\="" watch?v="k-V7KSfAauk&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}&quot;" data-widget_type="video.default"><div class="elementor-wrapper elementor-open-inline"><div class="elementor-video"></div></div></div></div></div></div><div class="elementor-element elementor-element-d1c74ed e-flex e-con-boxed e-con e-parent" data-id="d1c74ed" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+</div></div></div></div><div class="elementor-element elementor-element-d1c74ed e-flex e-con-boxed e-con e-parent" data-id="d1c74ed" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
   <div class="e-con-inner" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 50px 20px;">
     <div style="max-width: 380px; width: 100%; margin: 0 auto 16px auto; display: flex; justify-content: center;">
       <img src="images/mockup-dispositivos.png" alt="Método Curso Online com IA" style="width: 100%; max-width: 350px; height: auto; display: block; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.4));">
